@@ -11,6 +11,9 @@
 //#include <stdint.h> // To use uint8_t
 //#include <stdlib.h> // To call malloc()/sleep()
 //#include <unistd.h> // To call read()
+#include "ConcreteBehaviorA.hpp"
+#include "ConcreteBehaviorB.hpp"
+#include "Client.hpp"
 
 /* MACROS */
 
@@ -24,5 +27,10 @@ using namespace std;
  */
 int main()
 {
+	Client* Object1 = new Client(new ConcreteBehaviorA());
+	Client* Object2 = new Client(new ConcreteBehaviorB());
+	Object1->Execute();
+	Object2->Execute();
+
 	return 0;
 }

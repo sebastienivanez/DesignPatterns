@@ -1,5 +1,5 @@
 BUILD_DIRECTORY=Build
-cd ~/DesignPattern/StrategyPattern
+cd ~/DesignPatterns/StrategyPattern
 if [ -d $BUILD_DIRECTORY ]
 then
 	rm -rf Build
