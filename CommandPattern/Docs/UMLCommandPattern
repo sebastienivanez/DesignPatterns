@@ -1,0 +1,27 @@
+@startuml
+allow_mixing
+title CommandPattern
+
+class Invoker {
+    +ICommand On
+    +ICommand Off
+    +Execute()
+}
+class ICommand {
+    +virtual Execute() = 0
+    +virtual UnExecute() = 0
+}
+class OnCommand {
+    +Execute()
+    +UnExecute()
+}
+class OffCommand {
+    +Execute()
+    +UnExecute()
+}
+
+Invoker "Many" --> ICommand
+OnCommand <|-up- ICommand
+OffCommand <|-up- ICommand
+
+@enduml

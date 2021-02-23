@@ -5,6 +5,8 @@ Simple implementation of design patterns.
 ### Strategy Pattern
 The strategy pattern defines a family of algorithms, encapsulate eache one of them and makes them interchangeable.
 Strategy lets the algorithm vary independently from the clients that use it.
+### Command Pattern
+The command pattern encapsulates a request as an object, thereby letting you parameterise other objects with different requests, queue or log requests and supports undoable operations.
 ## Setting it up
 Clone the project to retrieve the sources: `$>git clone https://github.com/sebastienivanez/DesignPatterns.git`
 Go to the pattern you want to execute: `cd MyPattern`
