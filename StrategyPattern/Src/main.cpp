@@ -27,10 +27,33 @@ using namespace std;
  */
 int main()
 {
-	Client* Object1 = new Client(new ConcreteBehaviorA());
-	Client* Object2 = new Client(new ConcreteBehaviorB());
+  auto* CObject1 = new ConcreteBehaviorA();
+  auto* CObject2 = new ConcreteBehaviorB();
+	auto* Object1 = new Client(CObject1);
+	auto* Object2 = new Client(CObject2);
 	Object1->Execute();
 	Object2->Execute();
+	
+	if (Object1 != nullptr)
+	{
+	  delete Object1;
+	  Object1 = nullptr;
+	}
+	if (Object2 != nullptr)
+	{
+	  delete Object2;
+	  Object2 = nullptr;
+	}
+	if (CObject1 != nullptr)
+	{
+	  delete CObject1;
+	  CObject1 = nullptr;
+	}
+	if (CObject2 != nullptr)
+	{
+	  delete CObject2;
+	  CObject2 = nullptr;
+	}
 
 	return 0;
 }
