@@ -1,0 +1,23 @@
+@startuml
+allow_mixing
+title StrategyPattern
+
+class Client {
+    +IBehavior behavior
+    +Execute()
+}
+class IBehavior {
+    +virtual Execute() = 0
+}
+class ConcreteBehaviorA {
+    +Execute()
+}
+class ConcreteBehaviorB {
+    +Execute()
+}
+
+Client --> IBehavior
+ConcreteBehaviorA <|-up- IBehavior
+ConcreteBehaviorB <|-up- IBehavior
+
+@enduml
